@@ -4,7 +4,7 @@
     require_once 'includes/header.php';
     require_once 'db/conn.php';
 ?>
-    <h1 class="text-center">Items Registrations</h1>
+    <h1>Items Registrations</h1>
     <form method="post" action="success.php">
         <!-- itemsname
             quantity

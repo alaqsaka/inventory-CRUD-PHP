@@ -14,7 +14,7 @@
         $dot = $_POST['dot'];
 
         // call function to insert and track if succes or not 
-        $isSuccess = $crud->insert($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot);
+        $isSuccess = $crud->insertItem($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot);
 
         if ($isSuccess) {
             echo '<div class="alert alert-success" role="alert">

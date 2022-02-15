@@ -11,7 +11,7 @@
         }
 
         // Function to insert a new record into the inveontory database
-        public function insert($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot){
+        public function insertItem($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot){
             try {
                 // defined sql statement to be executed
                 $sql = "INSERT INTO inventory (itemsname, price, quantity, description, sellersname, sellerscontact, dateoftransaction) VALUES (:itemsname, :price, :quantity, :description, :sellersname, :sellerscontact, :dateoftransaction)";
@@ -33,6 +33,13 @@
                 return false;
 
             }
+        }
+
+        public function getItems(){
+            $sql = "SELECT * FROM `inventory`;";
+            $result = $this->db->query($sql);
+            return $result; 
+            
         }
     }
 ?>
