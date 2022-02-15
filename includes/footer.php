@@ -1,4 +1,4 @@
-<div id="footer" class="p-3 bg-primary text-white fixed-bottom">
+<div id="footer" class="p-3 bg-dark text-white fixed-bottom">
             <p class="text-center">Copyright &copy; - Aqsa <?php echo date('Y'); ?></p>
 
         </div>
