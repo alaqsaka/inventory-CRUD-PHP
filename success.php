@@ -3,7 +3,7 @@
     require_once 'includes/header.php';
 ?>
     <div class="alert alert-success" role="alert">
-        Success Adding New Item To Inventory
+        <h3>Success Adding New Item To Inventory</h3>
     </div>
     <!-- This prints out values that were passed to the action page using method="get" -->
     <!-- <div class="card" style="width: 18rem;">
