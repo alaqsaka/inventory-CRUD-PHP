@@ -41,5 +41,15 @@
             return $result; 
             
         }
+
+        public function getItemDetails($id){
+            $sql = "SELECT * from inventory where item_id = :id";
+
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindparam(':id', $id);
+            $stmt->execute();
+            $result = $stmt->fetch();
+            return $result;
+        }
     }
 ?>

@@ -13,10 +13,8 @@
             <th scope="col">Items Name</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
-            <th scope="col">Description</th>
-            <th scope="col">Sellers Name</th>
-            <th scope="col">Sellers Contact</th>
             <th scope="col">Transactions Date</th>
+            <th>Actions</th>
         </tr>
         <!-- <tr>
             <td>1</td>
@@ -34,10 +32,8 @@
                 <td><?php echo $r['itemsname'] ?></td>
                 <td><?php echo $r['price'] ?></td>
                 <td><?php echo $r['quantity'] ?></td>
-                <td><?php echo $r['description'] ?></td>
-                <td><?php echo $r['sellersname'] ?></td>
-                <td><?php echo $r['sellerscontact'] ?></td>
                 <td><?php echo $r['dateoftransaction'] ?></td>
+                <td><a class="btn btn-primary" href="view.php?id=<?php echo $r['item_id'] ?>">Details</a></td>
             </tr>
         <?php }?>
     </table>
