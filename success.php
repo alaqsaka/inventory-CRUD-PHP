@@ -1,10 +1,33 @@
 <?php
     $title = 'Success'; 
     require_once 'includes/header.php';
+    require_once 'db/conn.php';
+
+    if(isset($_POST['submit'])){
+        // extract values from the $_POST array
+        $itemsname =  $_POST['itemsname'];
+        $price = $_POST['price'];
+        $quantity = $_POST['quantity'];
+        $description = $_POST['description'];
+        $sellersname = $_POST['sellersname'];
+        $sellerscontact = $_POST['sellerscontact'];
+        $dot = $_POST['dot'];
+
+        // call function to insert and track if succes or not 
+        $isSuccess = $crud->insert($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot);
+
+        if ($isSuccess) {
+            echo '<div class="alert alert-success" role="alert">
+            <h3>Success Adding New Item To Inventory</h3>
+        </div>';
+        } else { 
+            echo '<div class="alert alert-danger" role="alert">
+            <h3>There was an error</h3>
+        </div>';
+        }
+    }
 ?>
-    <div class="alert alert-success" role="alert">
-        <h3>Success Adding New Item To Inventory</h3>
-    </div>
+    
     <!-- This prints out values that were passed to the action page using method="get" -->
     <!-- <div class="card" style="width: 18rem;">
         <div class="card-body">

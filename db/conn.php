@@ -9,8 +9,11 @@
 
     try{
         $pdo = new PDO($dsn, $user, $pass);
-        echo 'hello databse';
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $e) {
         throw new PDOException($e -> getMessage());
     }
+
+    require_once 'crud.php';
+    $crud = new crud($pdo);
 ?>
