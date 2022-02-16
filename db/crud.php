@@ -35,6 +35,10 @@
             }
         }
 
+        public function editItems($id){
+            
+        }
+
         public function getItems(){
             $sql = "SELECT * FROM `inventory`;";
             $result = $this->db->query($sql);

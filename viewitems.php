@@ -33,7 +33,10 @@
                 <td><?php echo $r['price'] ?></td>
                 <td><?php echo $r['quantity'] ?></td>
                 <td><?php echo $r['dateoftransaction'] ?></td>
-                <td><a class="btn btn-primary" href="view.php?id=<?php echo $r['item_id'] ?>">Details</a></td>
+                <td>
+                <a class="btn btn-primary" href="view.php?id=<?php echo $r['item_id'] ?>">View Details</a>
+                <a class="btn btn-warning" href="edit.php?id=<?php echo $r['item_id'] ?>">Edit Details</a>
+                </td>
             </tr>
         <?php }?>
     </table>
