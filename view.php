@@ -27,7 +27,7 @@
             </thead>
             <tbody>
                 <tr>
-                <th scope="row">1</th>
+                <th scope="row"><?= $result['item_id']?></th>
                 <td><?= $result['itemsname']?></td>
                 <td><?= $result['price']?></td>
                 <td><?= $result['quantity']?></td>
