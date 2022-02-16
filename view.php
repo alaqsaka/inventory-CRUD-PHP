@@ -5,12 +5,11 @@
     require_once 'db/conn.php';
 
     // Get item by ID
-    if(isset($_GET['id'])){
+    if(!isset($_GET['id'])){
+        echo "<h1 class='text-danger'>Please check details and try again</h1>";
+    } else {
         $id = $_GET['id'];
         $result = $crud->getItemDetails($id);
-    } else {
-        echo "<h1 class='text-danger'>Please check details and try again</h1>";
-    }
 ?>
 
     <table class="table table-bordered">
@@ -40,6 +39,7 @@
             </tbody>
         </table>
 
+<?php }?>
 <br>
 <br>
 <br>
