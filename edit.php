@@ -4,8 +4,6 @@
     require_once 'includes/header.php';
     require_once 'db/conn.php';
 
-    $results = $crud->getItems();
-
     if(!isset($_GET['id'])) {
         echo 'error';
     } else {
@@ -15,15 +13,7 @@
 ?>
     <h1>Edit Items</h1>
     <form method="post" action="editpost.php">
-        <input type="hidden" name="id" value="<?php echo $results['item_id'] ?>"/>
-        <!-- itemsname
-            quantity
-            description
-            date of transaction
-            price
-            seller contact
-            seller from
-    -->
+        <input type="hidden" name="id" value="<?php echo $items['item_id'] ?>"/>
         <div class="form-group">
             <label for="itemsname">Items Name</label>
             <input required type="text" class="form-control" id="itemsname" name="itemsname" value="<?php echo $items['itemsname']?>">

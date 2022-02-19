@@ -35,7 +35,28 @@
             }
         }
 
-        public function editItems($id){
+        public function editItems($id,$itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot){
+            try {
+                $sql = "UPDATE inventory SET itemsname=:itemsname, quantity=:quantity, price=:price,description=:description,sellersname=:sellersname,sellerscontact=:sellerscontact,dateoftransaction=:dot WHERE item_id = :id";
+                // prepare the sql statement for execution
+                $stmt = $this->db->prepare($sql);
+                // bind all placeholdes to the actual values
+                
+                $stmt->bindparam(':itemsname', $itemsname);
+                $stmt->bindparam(':quantity', $quantity);
+                $stmt->bindparam(':price', $price);
+                $stmt->bindparam(':description', $description);
+                $stmt->bindparam(':sellersname', $sellersname);
+                $stmt->bindparam(':sellerscontact', $sellerscontact);
+                $stmt->bindparam(':dot', $dot);
+                $stmt->bindparam(':id', $id);
+                $stmt->execute();
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                echo "rusak woiii";
+                return false;
+            }
             
         }
 
