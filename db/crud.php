@@ -60,9 +60,15 @@
         }
 
         public function getItems(){
-            $sql = "SELECT * FROM `inventory`;";
-            $result = $this->db->query($sql);
-            return $result; 
+            try {
+                $sql = "SELECT * FROM `inventory`;";
+                $result = $this->db->query($sql);
+                return $result;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+             
             
         }
 
@@ -82,13 +88,19 @@
         }
 
         public function getItemDetails($id){
-            $sql = "SELECT * from inventory where item_id = :id";
+            try {
+                $sql = "SELECT * from inventory where item_id = :id";
 
-            $stmt = $this->db->prepare($sql);
-            $stmt->bindparam(':id', $id);
-            $stmt->execute();
-            $result = $stmt->fetch();
-            return $result;
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id', $id);
+                $stmt->execute();
+                $result = $stmt->fetch();
+                return $result;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+            
         }
     }
 ?>

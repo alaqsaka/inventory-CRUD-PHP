@@ -20,12 +20,12 @@
             header("Location: index.php");
         }  else {
             echo $results;
-            echo "Error";
+            include 'includes/error_message.php';
         }
     }
 
     else {
-        echo "Error";
+        include 'includes/error_message.php';
     }   
 
 ?>

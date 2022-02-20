@@ -2,7 +2,7 @@
     require_once 'db/conn.php';
 
     if(!$_GET['id']){
-        echo 'Error';
+        include 'includes/error_message.php';
     } else {
         $id = $_GET['id'];
         $result = $crud->deleteItems($id);

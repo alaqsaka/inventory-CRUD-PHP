@@ -6,7 +6,7 @@
 
     // Get item by ID
     if(!isset($_GET['id'])){
-        echo "<h1 class='text-danger'>Please check details and try again</h1>";
+        include 'includes/error_message.php';
     } else {
         $id = $_GET['id'];
         $result = $crud->getItemDetails($id);

@@ -5,7 +5,7 @@
     require_once 'db/conn.php';
 
     if(!isset($_GET['id'])) {
-        echo 'error';
+        include 'includes/error_message.php';
     } else {
         $id = $_GET['id'];
         $items = $crud->getItemDetails($id);

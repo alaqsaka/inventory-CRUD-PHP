@@ -17,13 +17,9 @@
         $isSuccess = $crud->insertItem($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot);
 
         if ($isSuccess) {
-            echo '<div class="alert alert-success" role="alert">
-            <h3>Success Adding New Item To Inventory</h3>
-        </div>';
+            include 'includes/success_message.php';
         } else { 
-            echo '<div class="alert alert-danger" role="alert">
-            <h3>There was an error</h3>
-        </div>';
+            include 'includes/error_message.php';
         }
     }
 ?>
