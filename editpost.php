@@ -25,6 +25,7 @@
     }
 
     else {
+        header("Location: viewitems.php");
         include 'includes/error_message.php';
     }   
 

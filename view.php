@@ -6,6 +6,7 @@
 
     // Get item by ID
     if(!isset($_GET['id'])){
+        header("Location: viewitems.php");
         include 'includes/error_message.php';
     } else {
         $id = $_GET['id'];

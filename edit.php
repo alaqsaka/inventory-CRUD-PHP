@@ -6,6 +6,7 @@
 
     if(!isset($_GET['id'])) {
         include 'includes/error_message.php';
+        header("Location: viewitems.php");
     } else {
         $id = $_GET['id'];
         $items = $crud->getItemDetails($id);
