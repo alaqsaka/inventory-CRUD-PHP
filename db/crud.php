@@ -54,7 +54,6 @@
                 return true;
             } catch (PDOException $e) {
                 echo $e->getMessage();
-                echo "rusak woiii";
                 return false;
             }
             
@@ -64,6 +63,21 @@
             $sql = "SELECT * FROM `inventory`;";
             $result = $this->db->query($sql);
             return $result; 
+            
+        }
+
+        public function deleteItems($id){
+            try {
+                $sql = "DELETE FROM inventory where item_id = :id";
+
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id', $id);
+                $stmt->execute();
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
             
         }
 

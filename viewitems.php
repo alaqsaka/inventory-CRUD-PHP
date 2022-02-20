@@ -36,6 +36,7 @@
                 <td>
                 <a class="btn btn-primary" href="view.php?id=<?php echo $r['item_id'] ?>">View Details</a>
                 <a class="btn btn-warning" href="edit.php?id=<?php echo $r['item_id'] ?>">Edit Details</a>
+                <a onclick="return confirm('Are u sure u want to delete this items?');" class="btn btn-danger" href="delete.php?id=<?php echo $r['item_id'] ?>">Delete</a>
                 </td>
             </tr>
         <?php }?>
