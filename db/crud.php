@@ -102,5 +102,16 @@
             }
             
         }
+
+        public function getLatestItemsRegistered(){
+            try {
+                $sql = "SELECT * FROM `inventory` ORDER BY item_id DESC LIMIT 1;";
+                $result = $this->db->query($sql);
+                return $result;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+        }
     }
 ?>

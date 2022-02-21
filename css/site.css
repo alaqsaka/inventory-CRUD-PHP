@@ -85,3 +85,8 @@ body {
     /* or 27px */
     color: #069120;
 }
+
+.recent { 
+    display: flex;
+    justify-content: space-between;
+}
