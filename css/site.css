@@ -63,3 +63,25 @@ body {
     color: #B0B0B0;
 }
 
+.submit-btn { 
+    background-color: #069120;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    color: #FFFF;
+    margin-top: 20px;
+}
+
+.first-column { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.form-group > label{
+    font-size: 16px;
+    line-height: 170%;
+    margin-bottom: 10px;
+    /* or 27px */
+    color: #069120;
+}

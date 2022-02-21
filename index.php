@@ -5,16 +5,21 @@
     require_once 'db/conn.php';
 ?>
     <div class="row">
-        <div class="col-sm">
-            <h1 class="title">Items Registrations</h1>
-            <p class="sub-title">
-            In this page, we can add items that have been purchased. please enter according to what is in the transaction and according to the correct data type.
-            </p>
+        <div class="col-sm first-column">
+            <div>
+                <h1 class="title">Items Registrations</h1>
+                <p class="sub-title">
+                In this page, we can add items that have been purchased. please enter according to what is in the transaction and according to the correct data type.
+                </p>
+            </div>
+            <div>
             <form action="success.php" method="post">
                 <div class="form-group">
-                <label for="dot">Date Of Transaction</label>
-                <input type="text" class="form-control" id="dot" name="dot">
+                    <label for="dot">Date Of Transaction</label>
+                    <input type="text" class="form-control" id="dot" name="dot">
+                </div>
             </div>
+            
         </div>
             <div class="col-sm">
                 <div class="form-group">
@@ -44,10 +49,11 @@
                     <input required type="text" class="form-control" id="sellerscontact" name="sellerscontact">
                 </div>
             </div>
-            <button type="submit" name="submit" class="">Submit</button>
-        </form>
-        
-        
+
+    </div>
+    <div class="row">
+        <button type="submit" name="submit" class="btn btn-block submit-btn">Submit</button>
+            </form>
     </div>
     
     <!-- <form method="post" action="success.php">
