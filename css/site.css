@@ -1,0 +1,65 @@
+body { 
+    background-color: #F6F8FD;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar styling */
+.navbar-logo { 
+    color: #069120;
+    font-size: 26px;
+    line-height: 39px;
+    font-weight: 500;
+}
+
+.navbar-logo:hover{
+    text-decoration: none;
+    color: #069120;
+}
+
+.navbar-style {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.navbar-items{ 
+    width: fit-content;
+    justify-content: flex-end;
+}
+
+.nav-link { 
+    color: #152C5B;
+}
+
+.active { 
+    color: #069120;
+}
+
+.title { 
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+
+
+    color: #069120;
+}
+
+.sub-title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 170%;
+    /* or 27px */
+
+    text-align: justify;
+
+    color: #B0B0B0;
+}
+

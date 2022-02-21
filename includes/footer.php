@@ -3,7 +3,7 @@
 <br>
 <br>
 <br>
-<div id="footer" class="p-3 bg-dark text-white fixed-bottom">
+<div id="footer" class="p-3 text-white fixed-bottom" style="background-color: #069120;">
             <p class="text-center">Copyright &copy; - Aqsa <?php echo date('Y'); ?></p>
 
         </div>

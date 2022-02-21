@@ -17,13 +17,15 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-style">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.php">Fore's Inventory</a>
+          <div class="navbar-logo-div">
+            <a class="navbar-logo" href="index.php">Fore's Inventory</a>
+          </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse navbar-items" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.php">Items Registrations</a>
               <a class="nav-link" href="viewitems.php">Items Lists</a>
