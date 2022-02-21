@@ -4,7 +4,7 @@
 <br>
 <br>
 <div id="footer" class="p-3 text-white fixed-bottom" style="background-color: #069120;">
-            <p class="text-center">Copyright &copy; - Aqsa <?php echo date('Y'); ?></p>
+            <p class="text-center">Copyright 2022 • All rights reserved • Fore</p>
 
         </div>
 

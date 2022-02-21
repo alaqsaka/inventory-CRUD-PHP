@@ -55,6 +55,10 @@
         <button type="submit" name="submit" class="btn btn-block submit-btn">Submit</button>
             </form>
     </div>
+
+    <div class="row mt-4">
+        <h1 class="title">Last Item Registered</h1>
+    </div>
     
     <!-- <form method="post" action="success.php">
         <div class="form-group">
