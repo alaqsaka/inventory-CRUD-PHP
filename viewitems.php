@@ -6,10 +6,12 @@
 
     $results = $crud->getItems();
 ?>
-    <h1>Items Lists</h1>
-    <table class="table table-bordered">
+    <table class="table table-light table-bordered" style="border: 1px solid #E5E5E5 !important;">
         <tr>
-            <th scope="col">No. </th>
+            <th colspan="7" class="title-head">Items Registred</th>
+        </tr>
+        <tr>
+            <th scope="col">No. Transaction</th>
             <th scope="col">Items Name</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>

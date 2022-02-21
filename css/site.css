@@ -90,3 +90,46 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+  }
+
+  th,td { 
+      padding: 20px !important;
+  }
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #E5E5E5 !important;
+}
+
+.title-head { 
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    line-height: 36px;
+    /* identical to box height */
+    
+    
+    color: #069120;
+}
+
+.table-light { 
+    background-color: #ffff !important;
+}
+
+.table-bordered th { 
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 170%;
+    /* identical to box height, or 19px */
+
+
+    color: #069120;
+}
