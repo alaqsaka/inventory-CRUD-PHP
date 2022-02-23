@@ -13,7 +13,7 @@
         $result = $crud->getItemDetails($id);
 ?>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-light"  style="border: 1px solid #E5E5E5 !important;">
             <thead>
                 <tr>
                 <th scope="col">No. </th>
@@ -40,6 +40,12 @@
             </tbody>
         </table>
 
+        <div class="mt-2">
+            <a class="btn btn-primary" href="viewitems.php">Back to List</a>
+            <a class="btn btn-warning" href="edit.php?id=<?php echo $result['item_id'] ?>">Edit Details</a>
+            <a onclick="return confirm('Are u sure u want to delete this items?');" class="btn btn-danger" href="delete.php?id=<?php echo $result['item_id'] ?>">Delete</a>
+        </div>
+            
 <?php }?>
 <br>
 <br>

@@ -44,7 +44,8 @@
             <input type="text" class="form-control" id="dot" name="dot" value="<?php echo $items['dateoftransaction']?>">
         </div>
         <br/>
-            <button type="submit" name="submit" class="btn btn-success btn-block">Save Changes</button>
+            <a class="btn btn-primary" href="view.php?id=<?php echo $items['item_id'] ?>">Back</a>
+            <button type="submit" name="submit" class="btn btn-success">Save Changes</button>
     </form>
 
 <?php } ?>
