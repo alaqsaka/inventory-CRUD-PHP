@@ -54,9 +54,9 @@
                     <td><?php echo $r['quantity'] ?></td>
                     <td><?php echo $r['dateoftransaction'] ?></td>
                     <td>
-                        <a class="btn btn-primary" href="view.php?id=<?php echo $r['item_id'] ?>">View Details</a>
-                        <a class="btn btn-warning" href="edit.php?id=<?php echo $r['item_id'] ?>">Edit Details</a>
-                        <a onclick="return confirm('Are u sure u want to delete this items?');" class="btn btn-danger" href="delete.php?id=<?php echo $r['item_id'] ?>">Delete</a>
+                        <a class="btn" href="view.php?id=<?php echo $r['item_id'] ?>"><img src="public/icons/Vector.svg" alt=""></a>
+                        <a class="btn" href="edit.php?id=<?php echo $r['item_id'] ?>"><img src="public/icons/Vector-1.svg" alt=""></a>
+                        <a onclick="return confirm('Are u sure u want to delete this items?');" class="btn" href="delete.php?id=<?php echo $r['item_id'] ?>"><img src="public/icons/Vector-2.svg" alt=""></a>
                     </td>
                 </tr>
             <?php $i++;?>
@@ -71,9 +71,9 @@
                     <td><?php echo $r['quantity'] ?></td>
                     <td><?php echo $r['dateoftransaction'] ?></td>
                     <td>
-                        <a class="btn btn-primary" href="view.php?id=<?php echo $r['item_id'] ?>">View Details</a>
-                        <a class="btn btn-warning" href="edit.php?id=<?php echo $r['item_id'] ?>">Edit Details</a>
-                        <a onclick="return confirm('Are u sure u want to delete this items?');" class="btn btn-danger" href="delete.php?id=<?php echo $r['item_id'] ?>">Delete</a>
+                        <a class="btn" href="view.php?id=<?php echo $r['item_id'] ?>"><img src="public/icons/Vector.svg" alt=""></a>
+                        <a class="btn" href="edit.php?id=<?php echo $r['item_id'] ?>"><img src="public/icons/Vector-1.svg" alt=""></a>
+                        <a onclick="return confirm('Are u sure u want to delete this items?');" class="btn" href="delete.php?id=<?php echo $r['item_id'] ?>"><img src="public/icons/Vector-2.svg" alt=""></a>
                     </td>
                 </tr>
             <?php }?>
