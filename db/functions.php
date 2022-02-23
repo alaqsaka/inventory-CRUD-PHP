@@ -17,7 +17,8 @@
     
     function search($keyword){
         $query = "SELECT * from inventory 
-                WHERE itemsname LIKE '%$keyword%'";
+                WHERE itemsname LIKE '%$keyword%'
+                OR description LIKE '%$keyword%'";
 
         return query($query);
     }
