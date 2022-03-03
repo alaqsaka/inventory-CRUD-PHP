@@ -1,10 +1,12 @@
 <?php
-    $title = 'Index'; 
+    $title = 'Items Registrations'; 
 
     require_once 'includes/header.php';
     require_once 'db/conn.php';
 
     $results = $crud->getLatestItemsRegistered();
+
+    
 ?>
     <div class="row">
         <div class="col-sm first-column">
@@ -15,48 +17,52 @@
                 </p>
             </div>
             <div>
-            <form action="success.php" method="post">
-                <div class="form-group">
-                    <label for="dot">Date Of Transaction</label>
-                    <input type="text" class="form-control" id="dot" name="dot">
-                </div>
+            <form action="success.php" method="post" enctype="multipart/form-data">
+                <button type="submit" name="submit" class="btn btn-block submit-btn">Submit</button>
+               
             </div>
             
         </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label for="itemsname">Items Name</label>
-                    <input required type="text" class="form-control" id="itemsname" name="itemsname">
+                    <input required type="text" class="form-control" id="itemsname" name="itemsname" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input required type="text" class="form-control" id="price" name="price">
+                    <input required type="text" class="form-control" id="price" name="price" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="quantity">Quantity</label>
-                    <input required type="text" class="form-control" id="quantity" name="quantity">
+                    <input required type="text" class="form-control" id="quantity" name="quantity" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="dot">Date Of Transaction</label>
+                    <input type="text" class="form-control" id="dot" name="dot" autocomplete="off">
                 </div>
             </div>
             <div class="col-sm">
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <input required type="text" class="form-control" id="description" name="description">
+                    <input required type="text" class="form-control" id="description" name="description" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="sellersname">Sellers Name</label>
-                    <input required type="text" class="form-control" id="sellersname" name="sellersname">
+                    <input required type="text" class="form-control" id="sellersname" name="sellersname" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="sellerscontact">Sellers Contact</label>
-                    <input required type="text" class="form-control" id="sellerscontact" name="sellerscontact">
+                    <input required type="text" class="form-control" id="sellerscontact" name="sellerscontact" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="gambar">Bukti Bayar</label>
+                    <input type="file" class="form-control" id="gambar" name="gambar" autocomplete="off">
                 </div>
             </div>
 
     </div>
-    <div class="row">
-        <button type="submit" name="submit" class="btn btn-block submit-btn">Submit</button>
-            </form>
-    </div>
+    </form>
+    
 
     <div class="row mt-4 recent">
         <div>

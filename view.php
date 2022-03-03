@@ -40,6 +40,8 @@
             </tbody>
         </table>
 
+        <img src="img/<?= $result["gambar"]?>" alt="" width="400">
+
         <div class="mt-2">
             <a class="btn btn-primary" href="viewitems.php">Back to List</a>
             <a class="btn btn-warning" href="edit.php?id=<?php echo $result['item_id'] ?>">Edit Details</a>

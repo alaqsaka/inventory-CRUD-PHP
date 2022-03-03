@@ -5,6 +5,10 @@
 
     if(isset($_POST['submit'])){
         // extract values from the $_POST array
+        var_dump($_POST);
+        // var_dump($_FILES); 
+        
+
         $itemsname =  $_POST['itemsname'];
         $price = $_POST['price'];
         $quantity = $_POST['quantity'];
@@ -13,8 +17,56 @@
         $sellerscontact = $_POST['sellerscontact'];
         $dot = $_POST['dot'];
 
+        //upload gambar
+        $namaFile = $_FILES['gambar']['name'];
+        $ukuranFile = $_FILES['gambar']['size'];
+        $error = $_FILES['gambar']['error'];
+        $tmpName = $_FILES['gambar']['tmp_name'];
+
+        // cek apakah ada gambar yang diupload
+        if($error === 4){
+            echo "<script>
+            alert('pilih gambar terlebih dahulu');
+            </script>";
+            return false;   
+        }
+
+        // cek apakah yang diupload adalah gambar
+        $isGambar = ['jpg', 'jpeg', 'png'];
+        $ekstensiGambar = explode('.', $namaFile);
+        $ekstensiGambar = strtolower(end($ekstensiGambar));
+        if(!in_array($ekstensiGambar, $isGambar)){
+            echo "<script>
+            alert('Only JPG, JPEG, OR PNG');
+            </script>";
+            return false; 
+        }
+
+        // cek jika ukurannya terlalu besar
+        if($ukuranFile>1000000){
+            echo "<script>
+            alert('ukuran gambar terlalu besar');
+            </script>";
+        }
+
+        // lolos pengecekan, gambar siap diupload
+        $namaFileBaru = uniqid();
+        $namaFileBaru.= '.';
+        $namaFileBaru .= $ekstensiGambar;
+        move_uploaded_file($tmpName, 'img/' . $namaFileBaru);
+
+        if($namaFileBaru) {
+            echo "<script>
+            alert('data berhasil ditambahkan');
+            </script>";
+        } else { 
+            echo "<script>
+            alert('data gagal ditamahkan. periksa foto kembali');
+            </script>";
+        }
+
         // call function to insert and track if succes or not 
-        $isSuccess = $crud->insertItem($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot);
+        $isSuccess = $crud->insertItem($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot, $namaFileBaru);
 
         if ($isSuccess) {
             include 'includes/success_message.php';

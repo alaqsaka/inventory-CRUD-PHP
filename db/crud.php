@@ -11,10 +11,11 @@
         }
 
         // Function to insert a new record into the inveontory database
-        public function insertItem($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot){
+        function insertItem($itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot, $gambar){
             try {
                 // defined sql statement to be executed
-                $sql = "INSERT INTO inventory (itemsname, price, quantity, description, sellersname, sellerscontact, dateoftransaction) VALUES (:itemsname, :price, :quantity, :description, :sellersname, :sellerscontact, :dateoftransaction)";
+                
+                $sql = "INSERT INTO inventory (itemsname, price, quantity, description, sellersname, sellerscontact, dateoftransaction, gambar) VALUES (:itemsname, :price, :quantity, :description, :sellersname, :sellerscontact, :dateoftransaction, :gambar)";
                 // prepare the sql statement for execution
                 $stmt = $this->db->prepare($sql);
                 // bind all placeholdes to the actual values
@@ -25,6 +26,7 @@
                 $stmt->bindparam(':sellersname', $sellersname);
                 $stmt->bindparam(':sellerscontact', $sellerscontact);
                 $stmt->bindparam(':dateoftransaction', $dot);
+                $stmt->bindparam(':gambar', $gambar);
 
                 $stmt->execute();
                 return true;
