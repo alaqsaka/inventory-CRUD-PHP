@@ -37,9 +37,9 @@
             }
         }
 
-        public function editItems($id,$itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot){
+        public function editItems($id,$itemsname, $price, $quantity, $description, $sellersname, $sellerscontact, $dot, $gambar){
             try {
-                $sql = "UPDATE inventory SET itemsname=:itemsname, quantity=:quantity, price=:price,description=:description,sellersname=:sellersname,sellerscontact=:sellerscontact,dateoftransaction=:dot WHERE item_id = :id";
+                $sql = "UPDATE inventory SET itemsname=:itemsname, quantity=:quantity, price=:price,description=:description,sellersname=:sellersname,sellerscontact=:sellerscontact,dateoftransaction=:dot, gambar=:gambar WHERE item_id = :id";
                 // prepare the sql statement for execution
                 $stmt = $this->db->prepare($sql);
                 // bind all placeholdes to the actual values
@@ -51,6 +51,7 @@
                 $stmt->bindparam(':sellersname', $sellersname);
                 $stmt->bindparam(':sellerscontact', $sellerscontact);
                 $stmt->bindparam(':dot', $dot);
+                $stmt->bindparam(':gambar', $gambar);
                 $stmt->bindparam(':id', $id);
                 $stmt->execute();
                 return true;

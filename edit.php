@@ -13,8 +13,9 @@
     
 ?>
     <h1>Edit Items</h1>
-    <form method="post" action="editpost.php">
+    <form method="post" action="editpost.php" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $items['item_id'] ?>"/>
+        <input type="hidden" name="gambarLama" value="<?php echo $items['gambar'] ?>"/>
         <div class="form-group">
             <label for="itemsname">Items Name</label>
             <input required type="text" class="form-control" id="itemsname" name="itemsname" value="<?php echo $items['itemsname']?>">
@@ -42,6 +43,11 @@
         <div class="form-group">
             <label for="dot">Date Of Transaction</label>
             <input type="text" class="form-control" id="dot" name="dot" value="<?php echo $items['dateoftransaction']?>">
+        </div>
+        <div class="form-group">
+            <label for="gambar">Bukti bayar</label><br>
+            <img src="img/<?= $items['gambar']?>" alt="" width="350"><br><br>
+            <input type="file" class="form-control" id="gambar" name="gambar">
         </div>
         <br/>
             <a class="btn btn-primary" href="view.php?id=<?php echo $items['item_id'] ?>">Back</a>
