@@ -67,6 +67,7 @@
         
         <button type="submit" name="register" class="btn btn-green">Create new account</button>
     </form>
+    <p class="text-center">Already have account? <a href="http://">Log In</a></p>
 </div>
        
 <br>
