@@ -9,3 +9,4 @@ Features Created:
 - Login & register
 - Session
 - Cookie (remember me)
+- Pagination
