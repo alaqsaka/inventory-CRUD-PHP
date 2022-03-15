@@ -7,7 +7,7 @@
         header("Location: login.php");
         exit;
     }
-    
+
     $title = 'Items Registrations'; 
 
     require_once 'includes/header.php';
@@ -18,6 +18,7 @@
     
 ?>
     <div class="row">
+        <a href="logout.php">Log out</a>
         <div class="col-sm first-column">
             <div>
                 <h1 class="title">Items Registrations</h1>
