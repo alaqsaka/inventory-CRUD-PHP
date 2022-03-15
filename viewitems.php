@@ -1,4 +1,13 @@
 <?php
+    session_start();
+
+    if(!isset($_SESSION["login"])) {
+        // Jika tidak ada session login maka user akan dikembalikan ke halaman login
+        // if user has not login, head back to login page
+        header("Location: login.php");
+        exit;
+    }
+
     $title = 'Items Lists'; 
 
     require_once 'includes/header.php';
