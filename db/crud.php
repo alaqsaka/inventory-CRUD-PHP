@@ -62,17 +62,15 @@
             
         }
 
-        public function getItems(){
+        public function getItems($jumlahDataPerHalaman){
             try {
-                $sql = "SELECT * FROM `inventory`;";
+                $sql = "SELECT * FROM `inventory` LIMIT 0, $jumlahDataPerHalaman;";
                 $result = $this->db->query($sql);
                 return $result;
             } catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
             }
-             
-            
         }
 
         public function deleteItems($id){
