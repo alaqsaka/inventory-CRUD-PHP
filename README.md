@@ -8,3 +8,4 @@ Features Created:
 - Delete
 - Login & register
 - Session
+- Cookie (remember me)
