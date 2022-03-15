@@ -25,12 +25,17 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse navbar-items" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="index.php">Items Registrations</a>
-              <a class="nav-link" href="viewitems.php">Items Lists</a>
+          <?php if(isset($_SESSION["login"])) :?>
+              <div class="collapse navbar-collapse navbar-items" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="index.php">Items Registrations</a>
+                <a class="nav-link" href="viewitems.php">Items Lists</a>
+                <a class="link-danger nav-link text-danger" href="logout.php">Log out</a>
+              </div>
             </div>
-          </div>
+            
+          <?php endif?>
+          
         </div>
       </nav>
     <div class="container">

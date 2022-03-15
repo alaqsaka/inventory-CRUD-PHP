@@ -18,7 +18,7 @@
     
 ?>
     <div class="row">
-        <a href="logout.php">Log out</a>
+        
         <div class="col-sm first-column">
             <div>
                 <h1 class="title">Items Registrations</h1>
