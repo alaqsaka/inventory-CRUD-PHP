@@ -5,10 +5,50 @@
     function registrasi($data) {
         global $conn;
 
+        if(strlen($data["username"]) > 0) {
+            echo "<script>
+                len username > 0 
+            </script>";
+        } else {
+            echo "<script>
+                len username == 0
+            </script>";
+        }
+        
+        if(strlen($data["password"]) > 0) {
+            echo "<script>
+                len password> 0 
+            </script>";
+        } else {
+            echo "<script>
+                len password == 0
+            </script>";
+        }
+
+        if(strlen($data["confirmPassword"]) > 0) {
+            echo "<script>
+                len confirm password > 0 
+            </script>";
+        } else {
+            echo "<script>
+                len confirm password == 0
+            </script>";
+        }
+
         $username = strtolower(stripslashes($data["username"]));
         $password = mysqli_real_escape_string($conn, $data["password"]);
         $confirmPassword = mysqli_real_escape_string($conn, $data["confirmPassword"]);
 
+        // if(strlen($username) > 0 && strlen($password) && strlen($confirmPassword)) {
+
+        // } else {
+        //     echo "<script>
+        //         Field tidak boleh kosong
+        //     </script>";
+        // }
+
+        
+        
         if($password !== $confirmPassword) {
             echo "<script>alert('konfirmasi password tidak sesuai');</script>";
         }
