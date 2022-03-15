@@ -69,8 +69,11 @@
 
 <div style="max-width: 487px; margin: 0 auto;">
     <h1 class="titles">Login</h1>
+    
     <?php if(isset($error)) : ?>
-        <p>Username / password salah</p>
+        <div class="alert alert-danger" role="alert">
+            Username / password salah
+        </div>
     <?php endif?>
     <form action="" method="post">            
         <div class="form-group register-form">
