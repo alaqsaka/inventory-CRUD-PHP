@@ -1,5 +1,24 @@
 <?php
     session_start();
+    require 'functions.php';
+    // cek cookie
+    if(isset($_COOKIE['login']) && isset($_COOKIE['key'])) {
+        $id = $_COOKIE['id'];
+        $key = $_COOKIE['key'];
+
+        // ambil username berdasarkan id 
+        $result = mysqli_query($conn, "SELECT username from users
+        WHERE id = $id");
+
+        $row = mysqli_fetch_assoc($result);
+
+        // cek cookie dan username 
+        if ($key === hash('sha256', $row['username'])) {
+            $_SESSION['login'] = true;
+            header("Location: index.php");
+            exit;
+        }
+    }
 
     if(isset($_SESSION["login"])) {
         header("Location: index.php");
@@ -43,7 +62,7 @@
 <?php
     $title = 'Login'; 
 
-    require 'functions.php';
+    
     require_once 'includes/header.php';
     require_once 'db/conn.php';
     
@@ -66,6 +85,13 @@
             if(password_verify($password, $row["password"])) {
                 // set session 
                 $_SESSION["login"] = true;
+
+                // cek remember me
+                if(isset($_POST["remember"])) {
+                    // buat cookie
+                    setcookie('id', $row['id'], time()+60);
+                    setcookie('key', hash('sha256', $row['username']), time()+60);
+                }
 
                 header("Location: index.php");
                 exit;
@@ -95,6 +121,12 @@
         <div class="form-group register-form">
             <label for="password">Password: </label><br>
             <input type="password" name="password" id="password">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" name="remember" type="checkbox" value="" id="remember">
+            <label class="form-check-label" for="remember">
+                Remember me
+            </label>
         </div>
         
         
