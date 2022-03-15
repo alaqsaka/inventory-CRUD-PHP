@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    if(isset($_SESSION["login"])) {
+        header("Location: index.php");
+        exit;
+    }
+?>
+
 <html>
     <style>
         .titles { 
@@ -67,7 +75,7 @@
         
         <button type="submit" name="register" class="btn btn-green">Create new account</button>
     </form>
-    <p class="text-center">Already have account? <a href="http://">Log In</a></p>
+    <p class="text-center">Already have account? <a href="login.php">Log In</a></p>
 </div>
        
 <br>

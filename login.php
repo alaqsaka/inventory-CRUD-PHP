@@ -100,7 +100,7 @@
         
         <button type="submit" name="login" class="btn btn-green">Log In</button>
     </form>
-    <p class="text-center">Don't have an account? <a href="http://">Register</a></p>
+    <p class="text-center">Don't have an account? <a href="registration.php">Register</a></p>
 </div>
 
 <?php require_once 'includes/footer.php'; ?>
